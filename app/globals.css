@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Brand palette taken from the Wish Basket BD logo & cover */
+@theme {
+  --color-brand: #1E4D3A;
+  --color-brand-dk: #133627;
+  --color-gold: #EDB021;
+  --color-gold-dk: #D3970F;
+  --color-gold-lt: #FBEFC9;
+  --color-cream: #FBF7EE;
+  --color-sage: #DFE8D4;
+  --color-sage-dk: #7E9A6B;
+  --color-heart: #EC5466;
+
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-script-face), cursive;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--color-cream);
+  color: var(--color-brand-dk);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.fade-in { animation: fadeIn 0.2s ease; }
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.toast-animate { animation: toastIn 0.3s ease; }
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
